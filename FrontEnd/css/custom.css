@@ -1,0 +1,68 @@
+body{
+    background-color: #fff;
+    color: black;
+}
+.box{
+      border-radius: 50%;
+}
+
+.Title{
+    margin-top: 3%;
+    text-align: center;
+    transition-property: all;
+    transition-duration: 0.8s;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 200;
+    color: #375a7f;
+    
+}
+
+.EmiCard{
+
+    background-color: rgb(241, 247, 247);
+    display: inline-block;
+    margin: auto;
+    width: 20%;
+    margin-left: 10%;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px rgb(165, 165, 165);
+    margin-top: 15%;
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+.Emi{
+
+    text-align: center;
+}
+
+.EmiCard:hover{
+    cursor: pointer;
+    transition-duration: 0.8s;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.507);
+    transform: scale(1.1,1.1);
+}
+
+.EmiMonth{
+    display: inline-block;
+    margin-left: 35%;
+}
+
+.EmiAmountMonthly{
+    display: inline-block;
+    
+}
+
+.TotalPay{
+    display: inline-block;
+    color: #375a7f;
+    margin-left: 20%;
+    font-weight: bold;
+    
+}
+
+.TotalIntRate{
+    display: inline-block;
+   
+    color: #00bc8c;
+}

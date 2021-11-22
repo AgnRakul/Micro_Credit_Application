@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../FrontEnd/js/externalScripts.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Enter Your Details</title>
+</head>
+
+<body onload="finduseremail(); hide();">
+
+    <form class="myForm" method="get" action="http://localhost:9999/SubmitFormData">
+
+        <input type="text" name="useremail" id="useremail">
+        <label>Name
+            <input type="text" id="FullName" name="FullName" required>
+        </label>
+        <br><br>
+        <label>Age
+            <input type="tel" id="Age" name="userAge">
+        </label>
+        <br><br>
+        <label>Address
+            <input type="text" id="Address" name="Address">
+        </label>
+        <br><br>
+        <label>Pan No:
+            <input type="text" id="Pan_No" name="Pan_No">
+        </label>
+        <br><br>
+        <label>Current Company Name:
+            <input type="text" id="CurrentCompany" name="CurrentCompany">
+        </label>
+        <br><br>
+        <label>Current Salary:
+            <input type="text" id="CurrentSalary" name="CurrentSalary">
+        </label>
+        <br><br>
+        <label>Previous Salary:
+            <input type="text" id="PreviousSalary" name="PreviousSalary">
+            if Previous Salary is Not There Put 0
+        </label>
+        <br><br>
+        <fieldset>
+            <legend>Having Own House?</legend>
+            <p><label class="choice">
+                    <input type="radio" id="OwnHouse" name="OwnHouse" required value="1"> Yes </label></p>
+            <p><label class="choice">
+                    <input type="radio" id="OwnHouse" name="OwnHouse" required value="0"> No </label></p>
+        </fieldset>
+        <br><br>
+        <label>Rented Amount:
+            <input type="text" id="RentedAmount" name="RentedAmount">
+            if No-Rented House Put 0.
+        </label>
+        <br><br>
+        <label>Grocery Expenses:
+            <input type="text" id="GroceryExpenese" name="GroceryExpenese">
+        </label>
+        <br><br>
+        <fieldset>
+            <legend>Having EMI Currently</legend>
+            <label class="choice">
+                <input type="radio" id="CurrentEmi" name="CurrentEmi" value="1"> Yes </label></p>
+            <label class="choice">
+                <input type="radio" id="CurrentEmi" name="CurrentEmi" value="0"> No
+            </label>
+        </fieldset>
+
+        <br><br>
+        <label>Previous Hike
+            <input type="text" id="PreviousHike" name="PreviousHike">
+            if No Previous Hike Put 0
+        </label>
+
+        <br><br>
+        <label>Upcoming Hike
+            <select id="UpcomingHike" name="UpcomingHike">
+                <option value="" selected="selected">Select One</option>
+                <option value="12">In One Year</option>
+                <option value="24">In Two Years</option>
+                <option value="36">In Three Years</option>
+            </select>
+        </label>
+        <br><br>
+        <label>Bank Name
+            <input type="text" id="BankName" name="BankName">
+        </label>
+        <br><br>
+        <button type="submit" id="submitform">Submit</button>
+
+    </form>
+
+</body>
+
+</html>
