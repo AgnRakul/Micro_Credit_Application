@@ -32,11 +32,14 @@ function signup() {
 
     let Email = document.getElementById("email").value;
     let phoneNo = document.getElementById("pass").value;
+
     if (Email.length == 0 || phoneNo.length == 0) {
         alert("Fill the data");
 
     }
-
+    else {
+        document.cookie = "user" + "=" + Email + ";" + ";path=/";
+    }
     let httpRequestForSignUp = new XMLHttpRequest();
     httpRequestForSignUp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -101,32 +104,56 @@ function findData() {
                 Card.className = 'EmiCard';
                 box.appendChild(Card);
 
+                let form = document.createElement('form');
+                form.className = "purchasedata";
+                form.setAttribute('Method', 'GET');
+                form.setAttribute('action', 'http://localhost:9999/purchaseNow');
+                Card.appendChild(form);
+
+                let emailtxtbox = document.createElement('INPUT');
+                emailtxtbox.setAttribute('name', 'emailbox');
+                emailtxtbox.value = email[1];
+                emailtxtbox.style.display = 'none';
+                form.appendChild(emailtxtbox);
+
+
+                let monthbox = document.createElement('INPUT');
+                monthbox.setAttribute('name', 'monthbox');
+                monthbox.value = month;
+                monthbox.style.display = 'none';
+                form.appendChild(monthbox);
+
                 let Emi = document.createElement('h5');
                 Emi.className = "Emi";
                 Emi.id = "Emi";
                 Emi.innerHTML = "EMI";
-                Card.appendChild(Emi);
+                form.appendChild(Emi);
 
                 let EmiAmountMonthly = document.createElement('h6');
                 EmiAmountMonthly.className = "EmiAmountMonthly";
                 EmiAmountMonthly.id = "EmiAmountMonthly";
                 EmiAmountMonthly.innerHTML = `EMI: &#8377; ${emi}`;
-                Card.appendChild(EmiAmountMonthly);
+                form.appendChild(EmiAmountMonthly);
 
                 let EmiMonth = document.createElement('p');
                 EmiMonth.className = "EmiMonth";
                 EmiMonth.id = "EmiMonth";
                 EmiMonth.innerHTML = `Months: ${month}`;
-                Card.appendChild(EmiMonth);
+                form.appendChild(EmiMonth);
 
+                let LoanAmount = document.createElement('p');
+                LoanAmount.className = "LoanAmt";
+                LoanAmount.id = "LoanAmt";
+                LoanAmount.innerHTML = `Loan Amount <br> &#8377; ${loanAmount}`;
+                form.appendChild(LoanAmount);
 
 
                 let hrTag = document.createElement('hr');
-                Card.appendChild(hrTag);
+                form.appendChild(hrTag);
 
                 let minDiv = document.createElement('div');
                 minDiv.className = "min";
-                Card.appendChild(minDiv);
+                form.appendChild(minDiv);
 
                 let TotalPaymentHeading = document.createElement('h6');
                 minDiv.appendChild(TotalPaymentHeading);
@@ -168,8 +195,16 @@ function findData() {
                 progressBar.setAttribute('aria-valuemin', '0');
                 progressBar.setAttribute('aria-valuemax', '100');
                 // progressBar.setAttribute = " aria-valuemin='0' aria-valuemax='100'";
-                progressBar.style.width = `${loanAmount}%`;
+                progressBar.style.width = `${totalPay}%`;
                 progressDiv.appendChild(progressBar);
+
+
+                let purchaseLoan = document.createElement("INPUT");
+                purchaseLoan.setAttribute("type", "submit");
+                purchaseLoan.className = "Purchase";
+                purchaseLoan.id = "Purchase";
+                purchaseLoan.value = "Purchase Now";
+                form.appendChild(purchaseLoan);
 
 
 
@@ -216,4 +251,31 @@ function logOut() {
     document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     alert("welcome Back");
     window.location.href = "http://127.0.0.1:5500/FrontEnd/";
+}
+
+
+function ShowMyPurchase() {
+
+    let dbData = document.cookie;
+    let email = dbData.split("=");
+
+    alert("fuvk")
+    console.log(email[1]);
+
+
+    if (email[1] == '' || email[0] == '') {
+        window.location.href = "http://127.0.0.1:5500/FrontEnd/";
+    }
+
+    let httpRequestForSignUp = new XMLHttpRequest();
+    httpRequestForSignUp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.response);
+
+        }
+    };
+
+    httpRequestForSignUp.open("GET", "http://localhost:9999/showpurchase?_Email=" + email[1], true);
+    httpRequestForSignUp.send();
+
 }

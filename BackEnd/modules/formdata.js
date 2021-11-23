@@ -128,7 +128,7 @@ exports.FormData = function (req, res) {
                         } else {
                             console.log("Not-Eligible for loan -1");
                             response.send(
-                                "<script>alert('Not eligible to fuck '); window.history.go(-1); </script>"
+                                "<script>alert('Not eligible'); window.history.go(-1); </script>"
                             );
 
                             Eligibility = 0;
@@ -138,7 +138,7 @@ exports.FormData = function (req, res) {
                     } else {
                         console.log("Not-Eligible for loan -2");
                         response.send(
-                            "<script>alert('Not eligible to fuck '); window.history.go(-1); </script>"
+                            "<script>alert('Not Eligible'); window.history.go(-1); </script>"
                         );
                         Eligibility = 0;
 
@@ -206,7 +206,7 @@ exports.FormData = function (req, res) {
                         } else {
                             console.log("Not Eligible for Loan - 3");
                             response.send(
-                                "<script>alert('Not eligible to fuck '); window.history.go(-1); </script>"
+                                "<script>alert('Not eligible '); window.history.go(-1); </script>"
                             );
                             Eligibility = 0;
 
@@ -284,7 +284,7 @@ exports.FormData = function (req, res) {
 
                     console.log("Not Eligible for Loan");
                     response.send(
-                        "<script>alert('Not eligible to fuck '); window.history.go(-1); </script>"
+                        "<script>alert('Not eligible'); window.history.go(-1); </script>"
                     );
                 }
 

@@ -269,6 +269,9 @@ Fresher  - POSSIBILITY 1
 
 /*
 
+
+No Idea How it Works .. Lets Give a Tryyyyyyy.
+
  First Step - VirtualPan Card (Generator with Random)
  Second Step - Name , Id (Random Number between 3000 to 6000)
  Third Step - Emi Transaction [{

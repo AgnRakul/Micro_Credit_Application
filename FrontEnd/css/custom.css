@@ -19,15 +19,16 @@ body{
 
 .EmiCard{
 
-    background-color: rgb(241, 247, 247);
+    height: 300px;
+    background-color: rgba(235, 236, 236, 0.521);
     display: inline-block;
     margin: auto;
     width: 20%;
     margin-left: 10%;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0px 0px 30px rgb(165, 165, 165);
-    margin-top: 15%;
+    box-shadow: 0px 0px 20px rgb(221, 221, 221);
+    margin-top: 8%;
     transition-property: all;
     transition-duration: 0.8s;
 }
@@ -39,8 +40,9 @@ body{
 .EmiCard:hover{
     cursor: pointer;
     transition-duration: 0.8s;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.507);
+    box-shadow: 0px 0px 25px rgba(150, 150, 150, 0.507);
     transform: scale(1.1,1.1);
+    
 }
 
 .EmiMonth{
@@ -65,4 +67,37 @@ body{
     display: inline-block;
    
     color: #00bc8c;
+}
+
+.LoanAmt{
+    text-align: center;
+}
+
+.logout{
+
+margin-left: 90%;
+outline: none;
+  border: none;
+  width: 120px;
+  color: black;
+  height: 40px;
+  border-radius: 120px;
+  background-color: aqua;
+  font-weight: bold;
+}
+
+.logout{
+    background-color:rgba(201, 252, 252, 0.781);
+  border:2px solid gold;
+}
+
+#LoanAmt{
+    color: orange;
+    /* font-weight: bold; */
+}
+
+.PurchaseBtn{
+    margin-top: 3%;
+    width: 20%;
+    min-height: 8%;
 }

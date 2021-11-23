@@ -5,13 +5,14 @@ let SignUpModule = require('./modules/signUp');
 let SignInModule = require('./modules/signIn');
 let CustomerFormData = require('./modules/formdata')
 let finalData = require('./modules/finaldata');
-
+let purchase = require('./modules/purchase');
+let purchasedData = require('./modules/purchasedData');
 
 app.get('/SignUp', cors(), (req, res) => {
 
     SignUpModule.SignUp(req, res)
 
-    // res.send("Hello World");
+
 })
 
 app.get('/SignIn', cors(), (req, res) => {
@@ -28,6 +29,17 @@ app.get('/SubmitFormData', cors(), (req, res) => {
 app.get('/showDetails', cors(), (req, res) => {
 
     finalData.finaldata(req, res);
+});
+
+app.get('/purchaseNow', cors(), (req, res) => {
+
+    purchase.purchase(req, res);
+
+})
+
+app.get('/showpurchase', cors(), (req, res) => {
+
+    purchasedData.purchasedData(req, res);
 })
 
 const port = 9999;

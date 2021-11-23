@@ -1,64 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
 body{
-  background-color: #fff;
+  /* background-color: whitesmoke; */
+ 
+
+}
+.fill{
+  text-align: center;
   color: black;
 }
-.myForm {
-   margin: 10%;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 0.8em;
-    width: 50em;
-    padding: 5em;
-    border: 1px solid #ccc;
-  }
+
+.myForm{
+  /* margin-bottom: 10%; */
+  padding: 90px;
+  margin-left: 25%;
+  border-radius: 12px;
+  background-color: aliceblue;
+  box-shadow: 0px 0px 20px ghostwhite;
+  margin-top: 2%;
+  /* border-radius: 50%; */
+  width: 40%;
+}
+
+.myForm:hover{
+  cursor: pointer;
   
-  .myForm * {
-    box-sizing: border-box;
-  }
+}
+
+#submitform{
+
+  outline: none;
+  border: none;
+  width: 120px;
+  color: black;
+  height: 40px;
+  border-radius: 120px;
+  background-color: aqua;
+  font-weight: bold;
   
-  .myForm fieldset {
-    border: none;
-    padding: 0;
-  }
-  
-  .myForm legend,
-  .myForm label {
-    padding: 0;
-    font-weight: bold;
-  }
-  
-  .myForm label.choice {
-    font-size: 0.9em;
-    font-weight: normal;
-  }
-  
-  .myForm input[type="text"],
-  .myForm input[type="tel"],
-  .myForm input[type="email"],
-  .myForm input[type="datetime-local"],
-  .myForm select,
-  .myForm textarea {
-    display: block;
-    width: 100%;
-    border: 1px solid #ccc;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 0.9em;
-    padding: 0.3em;
-  }
-  
-  .myForm textarea {
-    height: 100px;
-  }
-  
-  .myForm button {
-    padding: 1em;
-    border-radius: 0.5em;
-    background: #eee;
-    border: none;
-    font-weight: bold;
-    margin-top: 1em;
-  }
-  
-  .myForm button:hover {
-    background: #ccc;
-    cursor: pointer;
-  }
+}
+
+#submitform:active
+{
+  background-color:rgba(201, 252, 252, 0.781);
+  border:2px solid gold;
+}
