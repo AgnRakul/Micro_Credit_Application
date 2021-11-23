@@ -12,6 +12,7 @@ exports.purchasedData = function (req, res) {
         const PurchasedDataFinder = await client.db("Credit").collection("PurchasedData").find({ "UserName": user });
         const ConvertToArray = await PurchasedDataFinder.toArray();
         console.log(ConvertToArray);
+        res.json(ConvertToArray)
     }
 
 

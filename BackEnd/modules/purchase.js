@@ -15,7 +15,16 @@ exports.purchase = function (req, res) {
         const ConvertToArray = await ExistingAccount.toArray();
 
 
-
+        function makeId(length) {
+            var result = "";
+            var characters =
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var charactersLength = characters.length;
+            for (var i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+            return result;
+        }
 
         for (let i = 0; i < ConvertToArray[0].data.length; i++) {
 
@@ -26,11 +35,14 @@ exports.purchase = function (req, res) {
                 let purchase = {
 
                     UserName: email,
+                    status: 1,
+                    id: makeId(10),
                     LoanAmount: ConvertToArray[0].data[i].LoanAmount,
                     TotalInterest: ConvertToArray[0].data[i].TotalInterest,
                     TotalPay: ConvertToArray[0].data[i].TotalPay,
                     MonthlyEMI: ConvertToArray[0].data[i].MonthlyEmi,
                     InterestRate: ConvertToArray[0].data[i].InterestRate,
+                    Months: ConvertToArray[0].data[i].Months
 
                 }
 
@@ -55,7 +67,6 @@ exports.purchase = function (req, res) {
         }
 
     };
-
 
     async function main() {
         const uri = mongoDbUrl;

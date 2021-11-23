@@ -1,0 +1,56 @@
+body{
+    background-color: #fff;
+    color: black;
+}
+.box2{
+    border-radius: 50%;
+}
+
+.EmiCard2{
+
+    height: 360px;
+    background-color: #f5f5f5;
+    display: inline-block;
+    margin: auto;
+    width: 20%;
+    margin-left: 10%;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgb(221, 221, 221);
+    margin-top: 5%;
+    transition-property: all;
+    transition-duration: 0.8s;
+}
+
+.EmiCard2:hover{
+  
+    transition-duration: 0.8s;
+    box-shadow: 0px 0px 25px rgba(150, 150, 150, 0.507);
+    transform: scale(1.1,1.1);
+    cursor: pointer;
+}
+
+.Emi2{
+
+    text-align: center;
+}
+
+.Purchase2{
+    background-color: rgba(255, 166, 0, 0.623);
+    margin-left: 29%;
+    outline: none;
+    border: none;
+    width: 110px;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    color: black;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    font-size: small;
+    font-weight: bold;
+}
+
+.Purchase2:hover{
+    cursor: progress;
+}

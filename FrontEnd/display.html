@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="./js/externalScripts.js"></script>
     <link rel="stylesheet" href="css/custom.css">
+
 </head>
 
 <body onload="findData()">
@@ -16,9 +17,22 @@
 
     <h3 class="Title">AVAILABLE PLANS</h3>
 
-    <a href="ViewPurchase.html">View All Purchased</a>
+    <a href="ViewPurchase.html" class="ViewPur">View Purchased</a>
 
     <input type="submit" class="logout" value="Logout" onclick="logOut()">
+
+    <div id="showmsg">
+        <center> <img id="svgVoid" src="css/svg/undraw_void_-3-ggu.svg" alt="">
+            <br> <br>
+            <h4>- No data -</h4>
+        </center>
+    </div>
+    <div id="loading">
+        <center> <img id="svgVoid" src="css/svg/xc.svg" alt="">
+            <br> <br>
+            <h4>- Loading -</h4>
+        </center>
+    </div>
 
     <div class="box">
 

@@ -10,18 +10,20 @@ exports.SignIn = function (req, res) {
     console.log(PhoneNo);
     async function SignIn(client) {
 
-        const ExistingAccount = await client.db("Credit").collection("UserSignUp").find({ "Email_Id": Email } && { "Phone_No": PhoneNo });
+        const ExistingAccount = await client.db("Credit").collection("UserSignUp").find({ "Email_Id": Email });
         const ConvertToArray = await ExistingAccount.toArray();
-        console.log(ConvertToArray);
+        console.log(ConvertToArray.length);
+        if (ConvertToArray.length == 1) {
+            if (ConvertToArray[0].Phone_No == PhoneNo) {
 
-        if (ConvertToArray.length >= 1) {
 
-            res.json(
-                {
-                    "Status": 1,
-                    "MSG": "Auth User",
-                }
-            )
+                res.json(
+                    {
+                        "Status": 1,
+                        "MSG": "Auth User",
+                    }
+                )
+            }
         } else {
 
             res.json(

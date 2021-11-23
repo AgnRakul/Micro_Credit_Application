@@ -45,3 +45,25 @@ body{
   background-color:rgba(201, 252, 252, 0.781);
   border:2px solid gold;
 }
+
+.LastSeen{
+ 
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 90%;
+  outline: none;
+  border: none;
+  width: 120px;
+  color: black;
+  height: 40px;
+  border-radius: 120px;
+  background-color:rgba(201, 252, 252, 0.781)
+  
+}
+.LastSeen:hover{
+  background-color:rgba(85, 233, 233, 0.781)
+  
+
+}
+
