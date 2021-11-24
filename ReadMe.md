@@ -5,13 +5,12 @@ This is an example of how you may give instructions on setting up your project l
         git clone https://github.com/RakulAgn/Micro_Credit_Application
 
 2.Install NPM PACKAGES
-        npm install
+    npm install
 
 3.Navigate to BackEnd Folder to Start the Server
-        cd BackEnd
+    cd BackEnd
 
 4.Start the Server 
-        node index.js
-
-    and Go Live the Index.html Page
+    node index.js
+and Go Live the Index.html Page
    
