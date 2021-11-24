@@ -38,7 +38,7 @@ Description: User SignUp
 <img src="FrontEnd/images/screenshots/SignIn.png" height="300em" />
 Description: User SignIn
 
-<img src="FrontEnd/images/screenshots/Form.png" height="300em" width="200em"/>
+<img src="FrontEnd/images/screenshots/Form.png" height="300em" width="600em"/>
 Description: Form Data to Check Loan
 
 <img src="FrontEnd/images/screenshots/LoanAvail.png" height="300em" />
