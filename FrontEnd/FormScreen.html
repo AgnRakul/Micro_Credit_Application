@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../FrontEnd/js/externalScripts.js"></script>
     <link rel="stylesheet" href="./css/main.css">
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
     <title>Enter Your Details</title>
 </head>
 
@@ -20,82 +21,115 @@
     <form class="myForm" method="get" action="http://localhost:9999/SubmitFormData">
 
         <input type="text" name="useremail" id="useremail">
-        <label class="label">Name
+
+        <div class="form-group">
+            <label for="FullName">Name:</label>
             <input type="text" id="FullName" name="FullName" required>
-        </label>
-        <br><br>
-        <label class="label">Age
-            <input type="tel" id="Age" name="userAge">
-        </label>
-        <br><br>
-        <label class="label">Address
+        </div>
+
+        <div class="form-group">
+            <label for="userAge">Age:</label>
+            <input type="text" maxlength="2" id="Age" name="userAge"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+        </div>
+
+        <div class="form-group">
+            <label for="Address">Address: </label>
             <input type="text" id="Address" name="Address">
-        </label>
-        <br><br>
-        <label class="label">Pan No:
-            <input type="text" id="Pan_No" name="Pan_No">
-        </label>
-        <br><br>
-        <label class="label">Current Company Name:
-            <input type="text" id="CurrentCompany" name="CurrentCompany">
-        </label>
-        <br><br>
-        <label class="label">Current Salary:
-            <input type="text" id="CurrentSalary" name="CurrentSalary">
-        </label>
-        <br><br>
-        <label class="label">Previous Salary:
-            <input type="text" id="PreviousSalary" name="PreviousSalary">
-            if Previous Salary is Not There Put 0
-        </label>
-        <br><br>
-        <fieldset>
-            <legend class="label">Having Own House?</legend>
-            <p><label class="choice">
-                    <input type="radio" id="OwnHouse" name="OwnHouse" required value="1"> Yes </label></p>
-            <p><label class="choice">
-                    <input type="radio" id="OwnHouse" name="OwnHouse" required value="0"> No </label></p>
-        </fieldset>
-        <br><br>
-        <label class="label">Rented Amount:
-            <input type="text" id="RentedAmount" name="RentedAmount">
-            if No-Rented House Put 0.
-        </label>
-        <br><br>
-        <label class="label">Grocery Expenses:
-            <input type="text" id="GroceryExpenese" name="GroceryExpenese">
-        </label>
-        <br><br>
-        <fieldset>
-            <legend class="label">Having EMI Currently</legend>
-            <label class="choice">
-                <input type="radio" id="CurrentEmi" name="CurrentEmi" value="1"> Yes </label></p>
-            <label class="choice">
-                <input type="radio" id="CurrentEmi" name="CurrentEmi" value="0"> No
-            </label>
-        </fieldset>
+        </div>
 
-        <br><br>
-        <label class="label">Previous Hike
-            <input type="text" id="PreviousHike" name="PreviousHike">
-            if No Previous Hike Put 0
-        </label>
+        <div class="form-group">
+            <label for="Pan_No">Pan No: </label>
+            <input type="text" id="Pan_No" name="Pan_No" style="text-transform:uppercase">
+        </div>
 
-        <br><br>
-        <label class="label">Upcoming Hike
+        <div class="form-group">
+            <label for="Currentcompany"">Current Company Name:</label>
+            <input type=" text" id="CurrentCompany" name="CurrentCompany">
+        </div>
+
+        <div class="form-group">
+            <label for="CurrentSalary">Current Salary:</label>
+            <input type="text" id="CurrentSalary" name="CurrentSalary"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+        </div>
+
+        <div class="form-group">
+            <label for="PreviousSalary">Previous Salary:</label>
+            <input type="text" id="PreviousSalary" name="PreviousSalary"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+            <h6>(if Previous Salary is Not There Put 0)</h6>
+        </div>
+
+        <div class="form-group">
+            <fieldset>
+                <legend>Having Own House?</legend>
+                <label for="OwnHouse">
+                    <input type="radio" id="OwnHouse" name="OwnHouse" required value="1"> Yes </label>
+                <label for="OwnHouse">
+                    <input type="radio" id="OwnHouse" name="OwnHouse" required value="0"> No </label>
+            </fieldset>
+        </div>
+
+        <div class="form-group">
+            <label for="RentedAmount">Monthly Rent:</label>
+            <input type="text" id="RentedAmount" name="RentedAmount"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+            <h6>(if No-Rented House Put 0.)</h6>
+        </div>
+
+        <div class="form-group">
+            <label for="GroceryExpenese">Grocery Expenses:</label>
+            <input type="text" id="GroceryExpenese" name="GroceryExpenese"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+        </div>
+        <div class="form-group">
+            <label for="EntertaimentExpenses">Entertaiment Expenses:</label>
+            <input type="text" id="EntertaimentExpenses" name="EntertaimentExpenses"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+        </div>
+
+
+
+        <div class="form-group">
+            <fieldset>
+                <legend>Having EMI Currently</legend>
+                <label for="CurrentEmi">
+                    <input type="radio" id="CurrentEmi" name="CurrentEmi" value="1"> Yes </label>
+                <label for="CurrentEmi">
+                    <input type="radio" id="CurrentEmi" name="CurrentEmi" value="0"> No
+                </label>
+            </fieldset>
+        </div>
+
+        <div class="form-group">
+            <label for="PreviousHike">Previous Hike:</label>
+
+            <input type="text" id="PreviousHike" name="PreviousHike"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+            <h6>(if No Previous Hike Put 0)</h6>
+        </div>
+
+        <div class="form-group">
+            <label for="UpcomingHike">Upcoming Hike:</label>
             <select id="UpcomingHike" name="UpcomingHike">
-                <option value="" selected="selected">Select One</option>
+                <option selected="selected">Select One</option>
                 <option value="12">In One Year</option>
                 <option value="24">In Two Years</option>
                 <option value="36">In Three Years</option>
             </select>
-        </label>
-        <br><br>
-        <label class="label">Bank Name
+        </div>
+
+        <div class="form-group">
+            <label for="BankName">Bank Name:</label>
             <input type="text" id="BankName" name="BankName">
-        </label>
-        <br><br>
-        <button type="submit" id="submitform">Submit</button>
+
+        </div>
+
+        <div class="form-group">
+            <button type="submit" id="submitform">Submit</button>
+
+        </div>
 
     </form>
 

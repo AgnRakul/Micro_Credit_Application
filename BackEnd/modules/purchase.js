@@ -1,6 +1,8 @@
 const { MongoClient } = require("mongodb");
 const mongoDbUrl = "mongodb+srv://MonkAno:MonkAno@cluster0.cfvup.mongodb.net/CreditApplication?retryWrites=true&w=majority";
 
+
+// To Purchase The loan it will Store to Database With Id 
 exports.purchase = function (req, res) {
 
     let email = req.query.emailbox;

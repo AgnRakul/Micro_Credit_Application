@@ -1,7 +1,4 @@
 // All pre Check
-
-
-
 /* First Creteria
 1. New Employee Minimum Age for Applying Loan Should Be 25 Years - Must 1
 2. Working Experiance Atleast 2 Years - Submit One Year Salary Data - Must 1

@@ -1,17 +1,22 @@
 let express = require("express");
 var cors = require("cors");
 const app = express();
+
+// Imported Modules 
 let SignUpModule = require('./modules/signUp');
 let SignInModule = require('./modules/signIn');
 let CustomerFormData = require('./modules/formdata')
 let finalData = require('./modules/finaldata');
 let purchase = require('./modules/purchase');
 let purchasedData = require('./modules/purchasedData');
-let deleteing = require('./modules/delete')
+let deleteing = require('./modules/delete');
+
+
+
+// Routes
 app.get('/SignUp', cors(), (req, res) => {
 
     SignUpModule.SignUp(req, res)
-
 
 })
 
@@ -42,10 +47,13 @@ app.get('/showpurchase', cors(), (req, res) => {
     purchasedData.purchasedData(req, res);
 })
 
-app.get('/cancel',cors(),(req,res)=>{
+app.get('/cancel', cors(), (req, res) => {
 
-deleteing.deleteLoan(req,res);
+    deleteing.deleteLoan(req, res);
 })
 
+
+
+// Port StartUp
 const port = 9999;
 app.listen(port, () => console.log(`Listening on port ${port}..`));

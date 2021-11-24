@@ -2,6 +2,7 @@ const { MongoClient } = require("mongodb");
 const mongoDbUrl = "mongodb+srv://MonkAno:MonkAno@cluster0.cfvup.mongodb.net/CreditApplication?retryWrites=true&w=majority";
 
 
+// Loan Related Detials to Fetched to Html
 exports.finaldata = function (req, res) {
 
 

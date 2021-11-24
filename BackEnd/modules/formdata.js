@@ -1,6 +1,7 @@
 const { MongoClient } = require("mongodb");
 const mongoDbUrl = "mongodb+srv://MonkAno:MonkAno@cluster0.cfvup.mongodb.net/CreditApplication?retryWrites=true&w=majority";
 
+// To Store Form Data into Db
 exports.FormData = function (req, res) {
 
     let emaildata = req.query.useremail;
@@ -15,6 +16,7 @@ exports.FormData = function (req, res) {
     let rentedHouse = req.query.RentedHouse;
     let rentedAmount = parseInt(req.query.RentedAmount);
     let groceryExpenese = parseInt(req.query.GroceryExpenese);
+    let entertaimentExpenses = parseInt(req.query.EntertaimentExpenses);
     let currentEmi = parseInt(req.query.CurrentEmi);
     let previousHike = parseInt(req.query.PreviousHike);
     let upcomingHike = parseInt(req.query.UpcomingHike);
@@ -33,6 +35,7 @@ exports.FormData = function (req, res) {
         "Rented_House": rentedHouse,
         "Rented_Amount": rentedAmount,
         "GroceryExpenese": groceryExpenese,
+        "EntertaimentExpenses": entertaimentExpenses,
         "Current_Emi": currentEmi,
         "Previous_Hike": previousHike,
         "Upcoming_Hike": upcomingHike,
@@ -56,7 +59,7 @@ exports.FormData = function (req, res) {
                 let UserCriteria = [];
                 let Eligibility = 0;
 
-                // Methods
+                // Methods Created to Check Common Criteria
                 let CriteriaCheck = {
 
                     RentCheck: function (rent) {
@@ -112,7 +115,7 @@ exports.FormData = function (req, res) {
 
                 }
 
-
+                // If Common Eligibility Success it will Store 1 and it will Proceed to next Condition Check
                 let CoreEligibleForFresher = 0;
 
                 // Common Eligibility
@@ -166,8 +169,6 @@ exports.FormData = function (req, res) {
                             if (UserCriteria[i] == 1) {
                                 CriteriaFlag = CriteriaFlag + 1;
                             }
-
-
                         }
                         if (CriteriaFlag >= 3) {
                             let percentage = 0;
@@ -206,7 +207,7 @@ exports.FormData = function (req, res) {
                         } else {
                             console.log("Not Eligible for Loan - 3");
                             response.send(
-                                "<script>alert('Not eligible '); window.history.go(-1); </script>"
+                                "<script>alert('Not eligible'); window.history.go(-1); </script>"
                             );
                             Eligibility = 0;
 
@@ -256,11 +257,6 @@ exports.FormData = function (req, res) {
 
                                 console.log(confirmedData);
                             });
-                            // res.json(
-                            //     data = {
-                            //         confirmedData
-                            //     }
-                            // )
                             async function insert() {
                                 await client.connect();
                                 const inset = await client
@@ -379,9 +375,7 @@ exports.FormData = function (req, res) {
                     },
                 }
 
-
                 let CoreEligibleForExperience = 0;
-
 
                 // Common Eligibility
                 if (previousSalary > 1) {

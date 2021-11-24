@@ -2,6 +2,7 @@ const { MongoClient } = require("mongodb");
 const mongoDbUrl = "mongodb+srv://MonkAno:MonkAno@cluster0.cfvup.mongodb.net/CreditApplication?retryWrites=true&w=majority";
 
 
+// Function to Delete Purchased Loan
 exports.deleteLoan = function (req, res) {
 
 

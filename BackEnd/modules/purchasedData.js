@@ -1,6 +1,8 @@
 const { MongoClient } = require("mongodb");
 const mongoDbUrl = "mongodb+srv://MonkAno:MonkAno@cluster0.cfvup.mongodb.net/CreditApplication?retryWrites=true&w=majority";
 
+
+// Purchased Data will Be Fetced From Db and it will Show to ViewPurhcase.html
 exports.purchasedData = function (req, res) {
 
 

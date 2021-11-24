@@ -1,10 +1,11 @@
+
+// Getting Details From User to Check the Login Data is Available in Databse
 function login() {
     let Email = document.getElementById("_email").value;
     let phoneNo = document.getElementById("_pass").value;
     console.log(typeof (Email.length));
     if (Email.length == 0 || phoneNo.length == 0) {
         alert("Fill the data");
-
     }
 
     let httpRequestForLogin = new XMLHttpRequest();
@@ -28,6 +29,7 @@ function login() {
     httpRequestForLogin.send();
 }
 
+// Function to Store New Users to DataBase
 function signup() {
 
     let Email = document.getElementById("email").value;
@@ -60,6 +62,14 @@ function signup() {
 
 }
 
+// fuNCTION TO Logout Account
+function logOut() {
+    document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    alert("welcome Back");
+    window.location.href = "http://127.0.0.1:5500/FrontEnd/";
+}
+
+// Forwarding User Email as Cookies to Check About the Exisiting Users Related Detials
 function finduseremail() {
 
     let mailbox = document.getElementById('useremail');
@@ -70,12 +80,14 @@ function finduseremail() {
 
 }
 
+// Hiding the Email box from the Page
 function hide() {
     let elm = document.getElementById("useremail");
     elm.style.display = "none";
 }
 
 
+// Function to Find Loan Related Details and Fetched to HTML
 function findData() {
 
     let dbData = document.cookie;
@@ -255,13 +267,8 @@ function findData() {
 
 }
 
-function logOut() {
-    document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    alert("welcome Back");
-    window.location.href = "http://127.0.0.1:5500/FrontEnd/";
-}
 
-
+// Function to Show Purchased Details
 function ShowMyPurchase() {
 
     let dbData = document.cookie;

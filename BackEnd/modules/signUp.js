@@ -2,6 +2,7 @@ const { MongoClient } = require("mongodb");
 const mongoDbUrl = "mongodb+srv://MonkAno:MonkAno@cluster0.cfvup.mongodb.net/CreditApplication?retryWrites=true&w=majority";
 
 
+// SignUp Module
 exports.SignUp = function (req, res) {
     let Email = req.query.Email;
     let PhoneNo = req.query.PhoneNo;
