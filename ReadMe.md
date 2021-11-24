@@ -30,6 +30,6 @@ and Go Live the Index.html Page
 
 ## ScreenShot
 
-<img src="FrontEnd/images/screenshots/SignUp.png" height="500em" />
+<img src="FrontEnd/images/screenshots/SignUp.png" height="300em" />
 
    
