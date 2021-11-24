@@ -432,3 +432,52 @@ function ShowMyPurchase() {
     http.send();
 
 }
+
+// Function to get Risk Score 
+// function RiskScore(Emi, ownhouse, loanAmount, loanPurchase) {
+
+//     let RiskScore = 10;
+//     let flag = 1;
+//     if (Emi == 1) {
+
+//         flag = RiskScore - 2;
+
+
+//     }
+//     if (ownhouse == 1) {
+
+//         flag = RiskScore + 3;
+
+//     }
+//     if (loanAmount >= 210000) {
+//         flag = RiskScore - 3;
+
+//     }
+//     if (loanPurchase >= 2) {
+//         flag = RiskScore - 4;
+
+//     }
+//     console.log(flag);
+
+// }
+// RiskScore(1, 0, 210001, 0)
+
+// function riskscore(emi, loanAmount, ownHouse, numberOfLoans) {
+
+//     let score = 10;
+//     if (emi == 1) {
+//         score = score - 2;
+//     }
+//     if (loanAmount >= 200000) {
+//         score = score - 1;
+//     }
+//     if (ownHouse == 1) {
+//         score = score + 1;
+//     }
+//     if (numberOfLoans >= 2) {
+//         score = score - 2;
+//     }
+
+//     console.log(score);
+// }
+// riskscore(1, 410000, 1, 1);
