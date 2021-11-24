@@ -32,19 +32,26 @@ and Go Live the Index.html Page
 
 
 
-<img src="FrontEnd/images/screenshots/SignUp.png" height="300em" />Description: User SignUp
+<img src="FrontEnd/images/screenshots/SignUp.png" height="300em" />
+Description: User SignUp
 
-<img src="FrontEnd/images/screenshots/SignIn.png" height="300em" />Description: User SignIn
+<img src="FrontEnd/images/screenshots/SignIn.png" height="300em" />
+Description: User SignIn
 
-<img src="FrontEnd/images/screenshots/Form.png" height="300em" />Description: Form Data to Check Loan
+<img src="FrontEnd/images/screenshots/Form.png" height="300em" width="200em"/>
+Description: Form Data to Check Loan
 
-<img src="FrontEnd/images/screenshots/LoanAvail.png" height="300em" />Description: Available Plans to Purchase
+<img src="FrontEnd/images/screenshots/LoanAvail.png" height="300em" />
+Description: Available Plans to Purchase
 
-<img src="FrontEnd/images/screenshots/Waitfordata.png" height="300em" />Description: Purchased Loan
+<img src="FrontEnd/images/screenshots/Waitfordata.png" height="300em" />
+Description: Purchased Loan
 
-<img src="FrontEnd/images/screenshots/NoData.png" height="300em" />Description: Purchased Loan
+<img src="FrontEnd/images/screenshots/NoData.png" height="300em" />
+Description: Purchased Loan
 
-<img src="FrontEnd/images/screenshots/PurchasedLoan.png" height="300em" />Description: Purchased Loan
+<img src="FrontEnd/images/screenshots/PurchasedLoan.png" height="300em" />
+Description: Purchased Loan
 
 
 
