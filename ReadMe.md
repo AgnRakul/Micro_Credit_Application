@@ -30,8 +30,6 @@ and Go Live the Index.html Page
 
 ## Video
 
-[![Watch the video](FrontEnd/video/thumbnail.png)](FrontEnd/video/CreditApplication.mp4)
-
 
 
 
